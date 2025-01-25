@@ -1,5 +1,3 @@
-import React from "react"
-
 function MyContainer() {
   return <div>MyContainer</div>
 }
