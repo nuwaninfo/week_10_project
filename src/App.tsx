@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg"
 
 import Header from "./components/Header"
 import MyContainer from "./components/MyContainer"
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import About from "./components/About"
 
 function App() {
