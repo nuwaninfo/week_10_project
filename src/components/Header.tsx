@@ -9,7 +9,7 @@ function Header() {
     i18n.changeLanguage(lng)
   }
   return (
-    <header>
+    <header className="header">
       <h1>A heading here</h1>
       <nav>
         <div className="nav-wrapper">
