@@ -21,20 +21,22 @@ function Header() {
               <Link to="/about">{t("About")}</Link>
             </li>
             <li>
-              <a
+              <button
+                id="fi"
                 className="waves-effect waves-light btn"
                 onClick={() => changeLanguage("fi")}
               >
                 FI
-              </a>
+              </button>
             </li>
             <li>
-              <a
+              <button
+                id="en"
                 className="waves-effect waves-light btn"
                 onClick={() => changeLanguage("en")}
               >
                 EN
-              </a>
+              </button>
             </li>
           </ul>
         </div>
