@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "../styles/About.css"
 
 interface IPost {
   id: number
@@ -23,12 +24,16 @@ function About() {
   }
 
   const postItems = postsList.map((post) => (
-    <div key={post.id}>
+    <div className="grid-item" key={post.id}>
       <h3>{post.title}</h3>
       <p>{post.body}</p>
     </div>
   ))
-  return <>{postItems}</>
+  return (
+    <div>
+      <div className="grid-container">{postItems}</div>
+    </div>
+  )
 }
 
 export default About
