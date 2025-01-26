@@ -1,5 +1,34 @@
+import { useEffect, useState } from "react"
+
+interface IPost {
+  id: number
+  title: string
+  body: string
+}
+
 function About() {
-  return <div>About</div>
+  const [postsList, setPostsList] = useState<IPost[]>([])
+
+  useEffect(() => {
+    fetchData()
+    console.log("fetching data")
+  }, [])
+
+  const fetchData = async () => {
+    const data = await fetch("https://jsonplaceholder.typicode.com/posts")
+
+    const jsonData = await data.json()
+
+    setPostsList(jsonData)
+  }
+
+  const postItems = postsList.map((post) => (
+    <div key={post.id}>
+      <h3>{post.title}</h3>
+      <p>{post.body}</p>
+    </div>
+  ))
+  return <>{postItems}</>
 }
 
 export default About
