@@ -11,7 +11,7 @@ function About() {
   const [postsList, setPostsList] = useState<IPost[]>([])
   const [partOfList, setPartOfList] = useState<IPost[]>([])
   const [itemCount, setItemCount] = useState(0)
-  const [defaultItemCount, setDefaultItemCount] = useState(12)
+  const [defaultItemCount] = useState(12)
 
   useEffect(() => {
     fetchData()
